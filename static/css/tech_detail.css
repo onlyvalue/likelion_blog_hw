@@ -152,8 +152,8 @@
 }
 
 .line {
-    width: 680px;
-    border-top: 1px dashed #B59C82;
+    width: 688px;
+    border-bottom: 1px dashed #B59C82;
 }
 
 .text {
@@ -377,19 +377,6 @@
     line-height: 160%; /* 22.4px */
 }
 
-.note-divider-between-comments {
-    display: flex;
-    width: 688px;
-    height: 0;
-    align-items: flex-start;
-}
-
-.line-between-comments {
-    width: 688px;
-    height: 1px;
-    background: var(--beige-line-strong, #B59C82);
-}
-
 .meta-sidebar {
     display: flex;
     width: 220px;
@@ -442,18 +429,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: 100%; /* 12px */
-}
-
-.note-divider {
-    display: flex;
-    height: 0;
-    align-items: flex-start;
-    align-self: stretch;
-}
-
-.note-line {
-    width: 220px;
-    border-top: 1px dashed #B59C82 !important;
 }
 
 .share {
