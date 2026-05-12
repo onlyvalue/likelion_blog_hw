@@ -1,7 +1,127 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}{{ post.title }} · {{ BRAND_NAME }}{% endblock %}
 
 {% block content %}
 {# TODO: W1 — 본문/TOC/Meta. W2 — 댓글 섹션. #}
+<link rel="stylesheet" href="{% static 'css/tech_detail.css' %}">
+<section class="tech-detail-main">
+    <div class="toc-list">
+        <p class="toc-list-title">ON THIS PAGE</p>
+        <div class="items">
+            <div class="first-toc-item">
+                <p>1. 토큰이란</p>
+            </div>
+            <div class="toc-item">
+                <p>2. 단위 결정</p>
+            </div>
+            <div class="toc-item">
+                <p>3. 빌드 파이프라인</p>
+            </div>
+            <div class="toc-item">
+                <p>4. 마무리</p>
+            </div>
+        </div>
+    </div>
+    <div class="article">
+        <div class="meta-top">
+            <div class="chip">
+                <p>Frontend</p>
+            </div>
+            <p class="meta-details">2026.04.28 · 8 min · series 5/8</p>
+        </div>
+        <p class="article-title">손에 익는 디자인 시스템 만들기</p>
+        <p class="article-subtitle">Designing a system that fits the hand — tokens, units, and the boring middle.</p>
+        <div class="note-divider">
+            <div class="line"></div>
+        </div>
+        <p class="text">디자인 시스템을 처음 만들 때, 저는 컴포넌트부터 시작했어요. 버튼, 카드, 입력 필드. 그러다 알았죠. <span style="color: var(--beige-accent-ink, #8C3A19);">토큰이 없는 컴포넌트는 짐</span>이라는 걸요.</p>
+        <p class="section-title">1. 토큰이란</p>
+        <p class="text">토큰은 디자인 결정에 이름을 붙이는 일이에요. <span style="font-family: 'JetBrains Mono'; font-size: 14px;">--accent</span>는 "주황색"이 아니라 "강조되는 무엇"을 의미하죠.</p>
+        <div class="code-block">
+            <pre class="code-text"><code>:root {
+  --accent: #E8794A;       /* terracotta · primary */
+  --accent-hover: #C95A2C; /* deeper rust */
+  --bg-page: #F5EDE0;      /* page · soft beige */
+}</code></pre>
+        </div>
+        <p class="text">이름을 잘 붙이면, 색을 바꾸는 일이 의미를 바꾸는 일이 됩니다. 그게 시스템이에요.</p>
+        <div class="note-divider">
+            <div class="line"></div>
+        </div>
+        <p class="comment">comments · 4</p>
+        <div class="sign-in-prompt">
+            <div class="prompt-text">
+                <p class="prompt-text-ko">댓글을 남기려면 로그인이 필요해요</p>
+                <p class="prompt-text-en">Sign in to leave a note on this page.</p>
+            </div>
+            <div class="sign-in-button">
+                <p>Sign in →</p>
+            </div>
+        </div>
+        <div class="comment-item">
+            <div class="avatar">
+                <p>JM</p>
+            </div>
+            <div class="body">
+                <div class="header">
+                    <p class="comment-name">jaemin</p>
+                    <p class="comment-date">2026.04.28</p>
+                </div>
+                <p class="comment-input">토큰 네이밍 진짜 어렵죠. semantic 레벨까지 가면 의견 갈리고요.</p>
+            </div>
+        </div>
+        <div class="note-divider-between-comments">
+            <div class="line-between-comments"></div>
+        </div>
+        <div class="comment-item">
+            <div class="avatar">
+                <p>SY</p>
+            </div>
+            <div class="body">
+                <div class="header">
+                    <p class="comment-name">soyun</p>
+                    <p class="comment-date">2026.04.29</p>
+                </div>
+                <p class="comment-input">다음 편 기다릴게요. 빌드 파이프라인 부분 궁금해요.</p>
+            </div>
+        </div>
+    </div>
+    <div class="meta-sidebar">
+        <p class="meta-title">META</p>
+        <div class="meta-list">
+            <div class="meta-row">
+                <p class="meta-label">author</p>
+                <p class="meta-value">아기사자</p>
+            </div>
+            <div class="meta-row">
+                <p class="meta-label">edited</p>
+                <p class="meta-value">2026.04.29</p>
+            </div>
+            <div class="meta-row">
+                <p class="meta-label">views</p>
+                <p class="meta-value">1,284</p>
+            </div>
+            <div class="meta-row">
+                <p class="meta-label">license</p>
+                <p class="meta-value">CC BY 4.0</p>
+            </div>
+        </div>
+        <div class="note-divider">
+            <div class="note-line"></div>
+        </div>
+        <p class="share">SHARE</p>
+        <div class="share-group">
+            <div class="chip-note">
+                <p>copy ⎘</p>
+            </div>
+            <div class="chip-note">
+                <p>x</p>
+            </div>
+            <div class="chip-note">
+                <p>rss</p>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

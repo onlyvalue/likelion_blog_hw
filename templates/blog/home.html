@@ -1,7 +1,145 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}{{ BRAND_NAME }}{% endblock %}
 
 {% block content %}
 {# TODO: W1 — 아기 사자 작성 영역 #}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+<section class="hero">
+    <div class="inner">
+        <div class="eyebrow-row">
+            <p class="welcome">welcome · 환영합니다</p>
+            <p class="date">— 2026, week 18</p>
+        </div>
+        <p class="hero-title">
+            기록하는 일이<br>
+            성장이 되는 곳<span class="point">.</span>
+        </p>
+        <p class="hero-description">
+            아기사자(BL)가 매일 조금씩 적어가는 노트입니다.
+            <br>기술, 프로젝트, 그리고 평범한 하루의 단상까지 — 천천히 쌓아 둡니다.
+        </p>
+        <div class="spacer1"></div>
+        <div class="ctas">
+            <div class="latest-btn">
+                <p>최신 글 읽기 →</p>
+            </div>
+            <div class="about-btn">
+                <p>about</p>
+            </div>
+            <div class="rss-btn">
+                <p>RSS</p>
+            </div>
+        </div>
+        <div class="spacer2"></div>
+        <div class="metaStrip">
+            <div class="now-writing">
+                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                    <circle cx="4" cy="4" r="4" fill="#E8794A"/>
+                </svg>
+                <p class="now-writing-text">now writing</p>
+                <p class="now-writing-title">디자인 토큰 시리즈 6편</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="today-note">
+    <div class="note-inner">
+        <div class="note-header">
+            <div class="note-frame">
+                <p class="note-num">01</p>
+                <p class="note-title">오늘의 노트</p>
+            </div>
+            <a href="{% url 'tech_list' %}">
+                <p class="see-all">see all →</p>
+            </a>
+        </div>
+        <div class="note-grid">
+            <a href="{% url 'tech_detail' 'design-system-that-fits-the-hand' %}">
+                <div class="featured-post">
+                    <div class="placeholder-img">
+                        <p class="placeholder-img-describe">손에 익는 디자인 시스템 · cover</p>
+                    </div>
+                    <div class="grid-content">
+                        <div class="grid-content-frame">
+                            <div class="chip">
+                                <p>Frontend</p>
+                            </div>
+                            <div class="chip-else">
+                                <p>series · 5/8</p>
+                            </div>
+                            <p class="chip-date">2026.04.28 · 8 min</p>
+                        </div>
+                        <p class="note-content-title">손에 익는 디자인 시스템 만들기</p>
+                        <p class="note-content-text">토큰을 짓는 일은 결국 이름을 짓는 일이다. 작은 결정에 이름을 붙이는 일 — 그게 시스템이다.</p>
+                        <p class="note-read-next">이어 읽기 →</p>
+                    </div>
+                </div>
+            </a>
+            <div class="latest-list">
+                <p class="latest-text">LATEST · 최근 5편</p>
+                <div class="grid-spacer"></div>
+                <a href="{% url 'tech_list' %}">
+                    <div class="post-mini">
+                    <div class="post-mini-frame">
+                        <div class="chip">
+                            <p>TypeScript</p>
+                        </div>
+                        <p class="post-date">04.21</p>
+                    </div>
+                    <p class="post-content">tRPC와 함께한 1년: 좋았던 것, 불편했던 것</p>
+                </div>
+                </a>
+                <a href="{% url 'tech_list' %}">
+                    <div class="post-mini">
+                    <div class="post-mini-frame">
+                        <div class="chip">
+                            <p>Frontend</p>
+                        </div>
+                        <p class="post-date">04.14</p>
+                    </div>
+                    <p class="post-content">CSS Container Queries, 결국 쓰게 되더라</p>
+                </div>
+                </a>
+                <a href="{% url 'tech_list' %}">
+                    <div class="post-mini">
+                    <div class="post-mini-frame">
+                        <div class="chip">
+                            <p>AI</p>
+                        </div>
+                        <p class="post-date">04.07</p>
+                    </div>
+                    <p class="post-content">Vibe coding 다음 단계 — 워크플로우 만들기</p>
+                </div>
+                </a>
+                <a href="{% url 'tech_list' %}">
+                    <div class="post-mini">
+                    <div class="post-mini-frame">
+                        <div class="chip">
+                            <p>Performance</p>
+                        </div>
+                        <p class="post-date">03.30</p>
+                    </div>
+                    <p class="post-content">React 19 컴파일러로 useMemo를 지웠다</p>
+                </div>
+                </a>
+                <a href="{% url 'tech_list' %}">
+                    <div class="post-mini-last">
+                    <div class="post-mini-frame">
+                        <div class="chip">
+                            <p>Series · DS</p>
+                        </div>
+                        <p class="post-date">03.22</p>
+                    </div>
+                    <p class="post-content">디자인 토큰을 코드로 옮기는 5가지 방법</p>
+                </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 {% endblock %}
